@@ -27,5 +27,5 @@ cp -r $package/* $target_dir
 
 cd app
 rm -rf ./elm-stuff
-elm make src/Main.elm
+elm make src/Main.elm --output=../index.html
 cd $here
