@@ -27,5 +27,8 @@ cp -r $package/* $target_dir
 
 cd app
 rm -rf ./elm-stuff
+if [ ! -e elm.json ]; then
+  yes | elm init
+fi
 elm make src/Main.elm --output=../index.html
 cd $here
